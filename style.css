@@ -6,25 +6,33 @@
     font-family: 'Lato', sans-serif;  
 }
 #navBarra{
-    background-color: #6b3fc4 !important;
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background-color: #6b3fc4 !important;
+    opacity: 1;*/
 }
 .nav-link {
     color: #FFf;
     font-size: 20px;
     font-weight: bold;
-    opacity: 1;
     text-transform: uppercase;
 }
 .nav-link:hover{
     color: #f1f1f1;
     opacity: 0.8;
 }
+.imgSlides{
+    object-fit: cover;
+}
 .titulos{
     color: #6b3fc4 !important;
+    animation: fly 2s;
 }
 .imgPortifolio1{
     border: 1px solid #6b3fc4;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    
 }
 .cardTitulo{
     background: #6a3093;  /* fallback for old browsers */
@@ -57,4 +65,15 @@
     margin-left: 50px;
     color: #5C258D;
     text-decoration: none;
+}
+@keyframes fly {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.card{
+    animation: fly 4s;
 }
